@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>項目入力｜シンポジウムのお申し込み｜全労済協会</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta name="author" content="一般財団法人全国勤労者福祉・共済振興協会">
+    <meta name="description" content="オンラインシンポジウムのお申し込みページです。一般財団法人全国勤労者福祉・共済振興協会">
+    <meta name="copyright" content="Copyright (c) 2019  Zenrosai kyokai. All Rights Reserved">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="シンポジウム,イベント,シンクタンク事業,全労済協会">
+    <link rel="stylesheet" href="./static/css/default.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript" src="./static/js/form.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/selectform.js"></script>
+    <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="utf-8"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-15182036-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- ヘッダー開始 -->
+        <div id="ot_header">
+            <h1 class="ot_logo_wrapper">
+                <a href="/"><img src="img/logo.png" alt="全労済協会 一般財団法人全国勤労者福祉・共済振興協会" class="ot_logo"></a>
+            </h1>
+            <nav id="ot_breadcrumbs">
+                <ul class="cf">
+                    <li><a href="/"><span><img src="img/icon_home.png" alt="全労災協会 HOME"></span></a></li>
+                    <li><span>シンポジウムのお申し込み</span></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- ヘッダー終了 -->
+
+        <!-- メイン開始 -->
+        <div id="ot_main">
+            <h2>
+                <figure><img src="img/tit_01.png" alt=""></figure>
+            </h2>
+            <div id="ot_flow">
+                <p class="resizeimage">
+                    <img src="img/flow_ent_sp.png" alt="" class="miniimage">
+                    <img src="img/flow_ent_pc.png" alt="" class="bigimage">
+                </p>
+            </div>
+
+            <div class="ot_txt_01">
+                <p class="mb10">オンラインシンポジウムのお申し込みは、こちらよりお願いします。</p>
+                <p>&#9312;以下の項目の各欄に入力をお願いします。</p>
+                <p>&#9313;視聴に必要な資料やアドレスは、こちらに入力いただいた住所、メールアドレス宛てにお送りします。</p>
+                <p>&#9314;入力内容に誤りがある場合、開始日の3月11日（木）までに資料の郵送が出来ない場合があります。必ず正しい内容をご入力ください。</p>
+                <p class="ti1em">
+                    &#9315;お申し込みの方の個人情報は、本講演会へのお申し込みの確認、ならびに今後の関連のセミナー・シンポジウム等のご案内の目的のために利用させていただきます。当目的以外に個人情報を利用する場合は、あらためて目的をお知らせし、同意を得るものとします。
+                </p>
+            </div>
+
+            <form name="form1" method="post" action="form.cgi">
+
+                <!-- エラー部 start -->
+                <TMPL_IF NAME="errs">
+                    <div class="errs">
+                        <ul>
+                            <TMPL_LOOP NAME="err_loop">
+                                <li>%err%</li>
+                            </TMPL_LOOP>
+                        </ul>
+                    </div>
+                </TMPL_IF>
+                <!-- エラー部 end -->
+
+                <table class="ot_tbl mb30">
+                    <tr>
+                        <th>
+                            <div class="cf %email-err%">
+                                メールアドレス<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="email" id="email" value="%email%" maxlength="100"
+                                class="ot_width formdefSet text %email-err%">
+                            <p class="fgGray">
+                                ※半角でご入力をお願いします。　入力例：taro@example.com<br>※お申し込み受付、およびYoutube視聴案内メールを送信いたしますので、受信（拒否）設定をされている場合は、次のドメインを受信できるように設定をお願いします。<br>指定ドメイン：@zenrosai.coop<br>　　　　　　　@takeda-prn.co.jp
+                            </p>
+                            <br>
+                            <p class="fgGray">
+                                <span
+                                    style="color:#f00;">「メールアドレス」に入力された値はメールアドレスとして正しくありません。<br>「メールアドレス」に指定したメールアドレスは受け付けられません。</span><br>
+                                と表示された場合は以下をご確認ください。<br><br>
+                                <span style="font-weight: bold;">＜登録できないよくあるメールアドレスの例＞</span><br>
+                                ・アットマーク（@）の直前やメールアドレスの先頭にピリオド（.）がある（例：.xxxx.@xxxxxx）<br>
+                                ・アットマーク（@）より前で、ピリオド（.）が連続している（例：xx..xx@xxxxxx）<br>
+                                ・半角英数字と一部の記号（. ! # $ % & ' * + – / = ? ^ _ { | } ~ ）以外の文字列を含んでいる<br>
+                                ・アットマーク（@）より後ろに存在しないドメインを指定している
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="26%">
+                            <div class="cf %name_1-err%">
+                                氏名<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td width="37%">
+                            姓<input type="text" name="name_1" id="name_1" value="%name_1%" maxlength="100"
+                                class="ot_width formdefSet text ml1hem %name_1-err%">
+                        </td>
+                        <td width="37%">
+                            名<input type="text" name="name_2" id="name_2" value="%name_2%" maxlength="100"
+                                class="ot_width formdefSet text ml1hem %name_2-err%">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %kana_1-err%">
+                                氏名フリガナ<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td>
+                            セイ<input type="text" name="kana_1" id="kana_1" value="%kana_1%" maxlength="100"
+                                class="ot_width formdefSet text mlhem %kana_1-err%">
+                        </td>
+                        <td>
+                            メイ<input type="text" name="kana_2" id="kana_2" value="%kana_2%" maxlength="100"
+                                class="ot_width formdefSet text mlhem %kana_2-err%">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %gender-err%">
+                                性別<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <select name="gender" class="formdefSet %gender-err%">
+                                <option value="" %gender_1_selected%>--選択--</option>
+                                <option value="男性" %gender_2_selected%>男性</option>
+                                <option value="女性" %gender_3_selected%>女性</option>
+                            </select>
+                        </td>
+                    </tr>
+
+
+                    <!-- <tr>
+                        <th>
+                            <div class="cf %age-err%">
+                                年齢<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="age" id="age" value="%age%" maxlength="100"
+                                class="ot_width formdefSet text %age-err%">
+                            <p class="fgGray">※半角でご入力をお願いします。　入力例：50</p>
+                        </td>
+                    </tr> -->
+
+                    <!-- 変更 年代 -->
+                    <tr>
+                        <th>
+                            <div class="cf %age-err%">
+                                年齢（年代）<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <select name="age" class="formdefSet %age-err%">
+                                <option value="" %age_1_selected%>--選択--</option>
+                                <option value="10代以下" %age_2_selected%>10代以下</option>
+                                <option value="20代" %age_3_selected%>20代</option>
+                                <option value="30代" %age_4_selected%>30代</option>
+                                <option value="40代" %age_5_selected%>40代</option>
+                                <option value="50代" %age_6_selected%>50代</option>
+                                <option value="60代" %age_7_selected%>60代</option>
+                                <option value="70代以上" %age_8_selected%>70代以上</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- /変更 年代 -->
+
+                    <tr>
+                        <th>
+                            <div class="cf %soufu_kubun-err%">
+                                送付先区分<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <p><label><input type="radio" name="soufu_kubun" id="soufu_kubun_1"
+                                        value="勤務先（「送付先団体名」を宛名に使用します）"
+                                        %soufu_kubun_1_checked%>勤務先（「送付先団体名」を宛名に使用します）</label></p>
+                            <p><label><input type="radio" name="soufu_kubun" id="soufu_kubun_2" value="自宅"
+                                        %soufu_kubun_2_checked%>自宅</label></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %kinmusaki-err%">
+                                送付先団体名<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="kinmusaki" id="kinmusaki" value="%kinmusaki%" maxlength="100"
+                                class="ot_width formdefSet text %kinmusaki-err%">
+                            <p class="fgGray">※送付先区分で「自宅」を選択した方は「個人」とご入力ください。</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %zip-err%">
+                                送付先郵便番号<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="zip" id="zip" value="%zip%" maxlength="7"
+                                class="ot_width formdefSet text %zip-err%"
+                                onKeyUp="AjaxZip3.zip2addr(this,'','addr1','addr2');">
+                            <p class="fgGray">※半角でご入力をお願いします。　入力例：1510053</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %addr1-err%">
+                                送付先都道府県<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="addr1" id="addr1" value="%addr1%" maxlength="100"
+                                class="ot_width formdefSet text %addr1-err%">
+                            <p class="fgGray">※入力例：東京都</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf pr %addr2-err%">
+                                送付先市区郡町村<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="addr2" id="addr2" value="%addr2%" maxlength="100"
+                                class="ot_width formdefSet text %addr2-err%">
+                            <p class="fgGray">※入力例：渋谷区代々木</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf pr %addr3-err%">
+                                送付先番地<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="addr3" id="addr3" value="%addr3%" maxlength="100"
+                                class="ot_width formdefSet text %addr3-err%">
+                            <p class="fgGray">※入力例：2-11-17</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>送付先ビル名</th>
+                        <td colspan="2">
+                            <input type="text" name="addr4" id="addr4" value="%addr4%" maxlength="100"
+                                class="ot_width formdefSet text %addr4-err%">
+                            <p class="fgGray">※建物名がある場合はご入力をお願いします。　入力例：ラウンドクロス新宿</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %tanto_tel-err%">
+                                電話番号<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="tanto_tel" id="tanto_tel" value="%tanto_tel%" maxlength="100"
+                                class="ot_width formdefSet text %tanto_tel-err%">
+                            <p class="fgGray">※半角でハイフンを含めてご入力をお願いします。　入力例：03-1234-5678</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %tanto_fax-err%">
+                                FAX番号
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="tanto_fax" id="tanto_fax" value="%tanto_fax%" maxlength="100"
+                                class="ot_width formdefSet text %tanto_fax-err%">
+                            <p class="fgGray">※半角でハイフンを含めてご入力をお願いします。　入力例：03-1234-5678</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %job_category-err%">
+                                職種
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <select id="job_category" name="job_category" class="formdefSet job_category_select">
+                                <option value="" %job_category_1_selected%>--選択--</option>
+                                <option value="公務員" %job_category_2_selected%>公務員</option>
+                                <option value="経営者・役員" %job_category_3_selected%>経営者・役員</option>
+                                <option value="会社員" %job_category_4_selected%>会社員</option>
+                                <option value="自営業" %job_category_5_selected%>自営業</option>
+                                <option value="専門職（医師、大学教授、研究者）" %job_category_6_selected%>専門職（医師、大学教授、研究者）</option>
+                                <option value="団体職員" %job_category_7_selected%>団体職員</option>
+                                <option value="NPO・NGO職員" %job_category_8_selected%>NPO・NGO職員</option>
+                                <option value="パート・アルバイト" %job_category_9_selected%>パート・アルバイト</option>
+                                <option value="学生" %job_category_10_selected%>学生</option>
+                                <option value="専業主婦" %job_category_11_selected%>専業主婦</option>
+                                <option value="その他（無職の場合も含む）" %job_category_12_selected%>その他（無職の場合も含む）</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <th>業種</th>
+                        <td colspan="2" class="vam">
+                            <select id="industry" name="industry" class="formdefSet ward">
+                                <option value="" %industry_1_selected%>--選択--</option>
+                                <optgroup label="製造業">
+                                    <option value="電機・電子・機械" %industry_2_selected%>電機・電子・機械</option>
+                                    <option value="建築・設備・工事業" %industry_3_selected%>建築・設備・工事業</option>
+                                    <option value="化学・製薬" %industry_4_selected%>化学・製薬</option>
+                                    <option value="繊維・素材" %industry_5_selected%>繊維・素材</option>
+                                    <option value="印刷・出版業" %industry_6_selected%>印刷・出版業</option>
+                                    <option value="農林水産業" %industry_7_selected%>農林水産業</option>
+                                    <option value="食品" %industry_8_selected%>食品</option>
+                                    <option value="その他の製造業" %industry_9_selected%>その他の製造業</option>
+                                </optgroup>
+                                <optgroup label="物流・通信業">
+                                    <option value="IT・情報通信業" %industry_10_selected%>IT・情報通信業</option>
+                                    <option value="電気・ガス・水道業" %industry_11_selected%>電気・ガス・水道業</option>
+                                    <option value="運輸・物流" %industry_12_selected%>運輸・物流</option>
+                                    <option value="卸売・小売" %industry_13_selected%>卸売・小売</option>
+                                    <option value="その他の物流・通信業" %industry_14_selected%>その他の物流・通信業</option>
+                                </optgroup>
+                                <optgroup label="金融・保険・不動産業">
+                                    <option value="銀行・信託・金融業" %industry_15_selected%>銀行・信託・金融業</option>
+                                    <option value="投資業" %industry_16_selected%>投資業</option>
+                                    <option value="証券・商品取引" %industry_17_selected%>証券・商品取引</option>
+                                    <option value="不動産取引業" %industry_18_selected%>不動産取引業</option>
+                                    <option value="不動産賃貸業" %industry_19_selected%>不動産賃貸業</option>
+                                    <option value="その他の金融・保険・不動産業" %industry_20_selected%>その他の金融・保険・不動産業</option>
+                                </optgroup>
+                                <optgroup label="サービス業">
+                                    <option value="ホテル・旅館" %industry_21_selected%>ホテル・旅館</option>
+                                    <option value="飲食" %industry_22_selected%>飲食</option>
+                                    <option value="娯楽" %industry_23_selected%>娯楽</option>
+                                    <option value="美容・理容業" %industry_24_selected%>美容・理容業</option>
+                                    <option value="病院・医療・ヘルスケア" %industry_25_selected%>病院・医療・ヘルスケア</option>
+                                    <option value="教育・研究・学会" %industry_26_selected%>教育・研究・学会</option>
+                                    <option value="その他のサービス業" %industry_27_selected%>その他のサービス業</option>
+                                </optgroup>
+                                <optgroup label="各種団体">
+                                    <option value="官公庁・政府機関・公益法人" %industry_28_selected%>官公庁・政府機関・公益法人</option>
+                                    <option value="法人団体" %industry_29_selected%>法人団体</option>
+                                    <option value="自治体" %industry_30_selected%>自治体</option>
+                                    <option value="その他の団体" %industry_31_selected%>その他の団体</option>
+                                </optgroup>
+                                <optgroup label="学部">
+                                    <option value="教育学部" %industry_32_selected%>教育学部</option>
+                                    <option value="経営学部" %industry_33_selected%>経営学部</option>
+                                    <option value="経済学部" %industry_34_selected%>経済学部</option>
+                                    <option value="芸術学部" %industry_35_selected%>芸術学部</option>
+                                    <option value="商学部" %industry_36_selected%>商学部</option>
+                                    <option value="文学部" %industry_37_selected%>文学部</option>
+                                    <option value="法学部" %industry_38_selected%>法学部</option>
+                                    <option value="理学部" %industry_39_selected%>理学部</option>
+                                    <option value="工学部" %industry_40_selected%>工学部</option>
+                                    <option value="農学部" %industry_41_selected%>農学部</option>
+                                    <option value="医学部" %industry_42_selected%>医学部</option>
+                                    <option value="薬学部" %industry_43_selected%>薬学部</option>
+                                    <option value="その他の学部" %industry_44_selected%>その他の学部</option>
+                                </optgroup>
+                                <optgroup label="その他">
+                                    <option value="その他の業種" class="b" %industry_45_selected%>その他の業種</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>担当業務</th>
+                        <td colspan="2">
+                            <select id="tanto_job" name="tanto_job" class="formdefSet">
+                                <option value="" %tanto_job_1_selected%>--選択--</option>
+                                <option value="経営" %tanto_job_2_selected%>経営</option>
+                                <option value="財務・会計・経理" %tanto_job_3_selected%>財務・会計・経理</option>
+                                <option value="人事・総務・庶務" %tanto_job_4_selected%>人事・総務・庶務</option>
+                                <option value="資材・購買・調達" %tanto_job_5_selected%>資材・購買・調達</option>
+                                <option value="営業・販売" %tanto_job_6_selected%>営業・販売</option>
+                                <option value="マーケティング・調査" %tanto_job_7_selected%>マーケティング・調査</option>
+                                <option value="広報・宣伝" %tanto_job_8_selected%>広報・宣伝</option>
+                                <option value="物流・生産管理" %tanto_job_9_selected%>物流・生産管理</option>
+                                <option value="コンサルタント" %tanto_job_10_selected%>コンサルタント</option>
+                                <option value="情報システム" %tanto_job_11_selected%>情報システム</option>
+                                <option value="研究・企画・開発" %tanto_job_12_selected%>研究・企画・開発</option>
+                                <option value="編集・設計・デザイン" %tanto_job_13_selected%>編集・設計・デザイン</option>
+                                <option value="教員・インストラクタ" %tanto_job_14_selected%>教員・インストラクタ</option>
+                                <option value="その他" %tanto_job_15_selected%>その他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %department-err%">
+                                部署
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="department" id="department" value="%department%" maxlength="100"
+                                class="ot_width formdefSet text %department-err%">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cf %position-err%">
+                                役職
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="position" id="position" value="%position%" maxlength="100"
+                                class="ot_width formdefSet text %position-err%">
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <th>
+                            <div class="cf %trigger-err%">
+                                本シンポジウムを<br>知ったきっかけ<i class="ot_tag">必須</i>
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <!-- <p><label>
+                                    <input type="radio" name="trigger" id="trigger_1" value="チラシ"
+                                        %trigger_1_checked%>チラシ</label></p> -->
+                            <p><label><input type="radio" name="trigger" id="trigger_1" value="全労済協会「Monthly Note」"
+                                        %trigger_1_checked%>全労済協会「Monthly Note」</label></p>
+                            <p><label><input type="radio" name="trigger" id="trigger_2" value="全労済協会メールマガジン"
+                                        %trigger_2_checked%>全労済協会メールマガジン</label></p>
+                            <p><label><input type="radio" name="trigger" id="trigger_3" value="団体・会社等からの紹介"
+                                        %trigger_3_checked%>団体・会社等からの紹介</label></p>
+                            <p><label><input type="radio" name="trigger" id="trigger_4" value="友人・知人からの紹介"
+                                        %trigger_4_checked%>友人・知人からの紹介</label></p>
+                            <p><label><input type="radio" name="trigger" id="trigger_5" value="その他"
+                                        %trigger_5_checked%>その他（上記以外はご記入ください）<p class="fgGray">
+                                        &nbsp;&nbsp;〔例〕・・・からのメールマガジン</p>
+                                </label></p>
+                            <p><input type="text" name="other_trigger" id="other_trigger" value="%other_trigger%"
+                                    maxlength="100" class="ot_width formdefSet ml20 text %other_trigger-err%"></p>
+                        </td>
+                    </tr>
+
+                    <!-- 追加 -->
+                    <tr>
+                        <th>
+                            <div class="cf">
+                                本シンポジウム<br>の申込動機<br>（※複数選択可）
+                            </div>
+                        </th>
+                        <td colspan="2">
+                            <p><label>
+                                    <input type="checkbox" name="motivation" id="motivation_1" value="講演内容"
+                                        %motivation_1_checked%>講演内容</label></p>
+
+                            <p><label><input type="checkbox" name="motivation" id="motivation_2" value="講演者（寺島実郎氏）"
+                                        %motivation_2_checked%>講演者（寺島実郎氏）</label></p>
+
+                            <p><label><input type="checkbox" name="motivation" id="motivation_3" value="開催方式（オンライン）"
+                                        %motivation_3_checked%>開催方式（オンライン）</label></p>
+
+                            <p><label><input type="checkbox" name="motivation" id="motivation_4" value="参加費無料"
+                                        %motivation_4_checked%>参加費無料</label></p>
+
+                            <p><label><input type="checkbox" name="motivation" id="motivation_5" value="その他"
+                                        %motivation_5_checked%>その他（上記以外はご記入ください）
+
+                                </label></p>
+                            <p><input type="text" name="other_motivation" id="other_motivation"
+                                    value="%other_motivation%" maxlength="100"
+                                    class="ot_width formdefSet ml20 text %other_motivation-err%"></p>
+                        </td>
+                    </tr>
+                    <!-- /追加 -->
+
+                    <tr>
+                        <th>全労済協会主催イベントの<br>ご参加経験<br>（※複数選択可）</th>
+                        <td colspan="2">
+                            <p><label><input type="checkbox" name="experience" id="experience_1"
+                                        value="シンポジウム・講演会に参加したことがある" %experience_1_checked%>シンポジウム・講演会に参加したことがある
+                                    <!-- 追加 -->
+                                    <br>
+                                    <select id="experience_number" name="experience_number"
+                                        class="formdefSet ml20 mb10">
+                                        <option value="" %experience_number_1_selected%>--選択--</option>
+                                        <option value="初めて" %experience_number_2_selected%>初めて</option>
+                                        <option value="2～3回目" %experience_number_3_selected%>2～3回目</option>
+                                        <option value="4～5回目" %experience_number_4_selected%>4～5回目</option>
+                                        <option value="6回目以上" %experience_number_5_selected%>6回目以上</option>
+                                    </select>
+                                    <!-- /追加 -->
+                                </label>
+                            </p>
+                            <p><label><input type="checkbox" name="experience" id="experience_2"
+                                        value="大学寄附講座に参加したことがある" %experience_2_checked%>大学寄附講座に参加したことがある</label></p>
+                            <p><label><input type="checkbox" name="experience" id="experience_3"
+                                        value="その他イベントに参加したことがある" %experience_3_checked%>その他イベントに参加したことがある</label></p>
+                        </td>
+                    </tr>
+                </table>
+                <p class="mb10">シンポジウム・講演会情報やシンクタンク事業の最新情報をお届けします。</p>
+                <table class="ot_tbl mb30">
+                    <tr>
+                        <th width="26%">
+                            <p>メルマガ配信希望</p>
+                        </th>
+                        <td width="74%">
+                            <p><label><input type="radio" name="mailmag" id="mailmag_1" value="希望する"
+                                        %mailmag_1_checked%>希望する</label>
+                            </p>
+                            <p><label><input type="radio" name="mailmag" id="mailmag_2" value="希望しない"
+                                        %mailmag_2_checked%>希望しない</label></p>
+                        </td>
+                    </tr>
+                </table>
+
+                %hidden%
+            </form>
+
+            <p class="ot_txt_02"><a href="http://www.zenrosaikyokai.or.jp/privacy/">プライバシーポリシー</a>をご一読の上、確認画面へお進みください。
+            </p>
+            <p><input type="button" class="ot_btnReset ot_btn_01" value="入力内容を確認する" onclick="document.form1.submit()">
+            </p>
+
+        </div>
+        <!-- メイン終了 -->
+
+        <footer>
+            <p><small>Copyright &copy; 2019　Zenrosai kyokai. All Rights Reserved</small></p>
+        </footer>
+
+
+    </div>
+
+</body>
+
+</html>
